@@ -2,11 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function RestaurantList({ restaurants }) {
+    console.log(restaurants.restaurants);
+
+    const restaurantsList = restaurants.restaurants || [];
     return (
         <div>
             <h2>Restaurants</h2>
             <ul>
-                {restaurants.map((restaurant) => (
+                {restaurantsList.map((restaurant) => (
+                    console.log(restaurant),
                     <li key={restaurant.id}>
                         <Link to={`/restaurant/${restaurant.id}`}>
                             <div>
