@@ -49,7 +49,7 @@ function App() {
         JSON.parse(
           response.choices[0].message.content
             ? response.choices[0].message.content
-            : "[]"
+            : "[Restau]"
         )
       );
     } catch (error) {
@@ -61,11 +61,12 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div style= {{ backgroundColor: "#D3D3D3", minHeight: "100vh", minWidth: "200vh"}}>
+      <div className="main" style={{ display: "flex", justifyContent: "center", alignItems: "center", marginRight: "30vh"}}>
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/ ">Home</Link>
             </li>
           </ul>
         </nav>
@@ -92,6 +93,7 @@ function App() {
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
+      </div>
       </div>
     </Router>
   );
