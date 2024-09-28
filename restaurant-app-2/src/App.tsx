@@ -10,7 +10,7 @@ import OpenAI from "openai";
 function App() {
 
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "",
     dangerouslyAllowBrowser: true,
   });
 
@@ -19,7 +19,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   // Ensure your API key is not exposed in your source code.
-  const apiKey = "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";
+  const apiKey = "";
 
   const handleUserInput = (e: {
     target: { value: SetStateAction<string> };
